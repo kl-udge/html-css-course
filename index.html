@@ -48,6 +48,60 @@
                 the strong element- used when showing importance or urgency -->
 
         </section>
+
+        <section>
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <fieldset>
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked>
+                    <label for="indoor">Indoor</label>
+                    
+                    <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">
+                    <label for="outdoor">Outdoor</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Whats your cat's personality?</legend>
+
+                    <input type="checkbox" id="loving" name="personality" value="loving" checked>
+                    <label for="loving">Loving</label>
+
+                    <input type="checkbox" id="lazy" name="personality" value="checkbox">
+                    <label for="lazy">Lazy</label>
+
+                    <input type="checkbox" id="energetic" name="personality" value="energetic">
+                    <label for="energetic">Energetic</label>
+                </fieldset>
+
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+            </form>
+
+            <!-- learn about:
+                - forms (ie: action attribute -> action attribute indicates where form data should be sent)
+
+                - Input element -> The input element allows you several ways to collect data from a web form.
+                    - type attribute -> Its added to the input element and its used to specify what type of text input will you have for example you can define it to a button, to a radio button, to a text input, to a checkbox etc.
+                    - name attribute -> Its added to the input element and it represents the data being submitted.
+                    - placeholder attribute -> Its added on the input element and it  is used to give people a hint about what kind of information to enter into an input.
+                    - required attribute -> Prevents the user from submitting the data when the information required is missing. Added on the input element and does not require the attribute value.
+
+                - button element -> Creates a clickable button.
+                    -type attribute -> defines what type of button did you have for example you can define a button to submit.
+
+                - radio buttons -> syntax is that of input elements but now the type attribute value is set to radio. Used   for questions where you want only one answer out of multiple options.
+                    - id attribute -> The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
+                    - name attribute -> normally  both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.
+                    - value attribute ->
+
+                - label elements -> label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.
+                - for attribute ->  associates an input element's text with the element itself.
+
+                - Fieldset elements -> Used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.
+
+                - legend element -> The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
+             -->
+        </section>
     </main>
 </body>
 </html>
