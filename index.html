@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Cafe Menu</title>
+
+    <!-- this was stling using the style elment but now since we have many css propertis to add we will use an exterbal css file where we will add all our styling there
+    <style>
+        styling an element by specifying it in the style element and setting a property for it
+        h1 {
+            text-align: center;
+        }
+
+        adding the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas
+        h1, p, h2 {
+            text-align: center;
+        }
+    </style> -->
 </head>
 <body>
-    <main></main>
+    <div class="menu">
+        <main>
+            <h1>CAMPER CAFE</h1>
+            <P>Est. 2020</P>
+
+            <section>
+                <h2>Coffee</h2>
+
+                <article class="item">
+                    <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">Mocha</p><p class="price">4.50</p>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
