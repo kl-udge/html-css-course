@@ -13,20 +13,28 @@
     <form action="https://register-demo.freecodecamp.org" method="post">
         <fieldset>
             <label for="first-name">Enter your first name:
-                <input id="first-name" />
+                <input type="text" id="first-name" required />
             </label>
             <label for="last-name">Enter your last name:
-                <input id="last-name" />
+                <input type="text" id="last-name" required />
             </label >
             <label for="email">Enter your email:
-                <input id="email" />
+                <input type="email" id="email" required />
             </label>
             <label for="new-password">Create a new password:
-                <input id="new-password" />
+                <input type="password"  id="new-password" pattern="[a-z0-5]{8,}" required />
             </label>
         </fieldset>
+        <fieldset>
+            <legend>Account type (required)</legend>
+            <label for="personal-account"><input type="radio" id="personal-account" name="account-type" checked> Personal</label>
+            <label for="business-account"><input type="radio" id="business-account" name="account-type"> Business</label>
+        </fieldset>
         <fieldset></fieldset>
-        <fieldset></fieldset>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+        <input type="submit" value="Submit" />
     </form>
 </body>
 </html>
