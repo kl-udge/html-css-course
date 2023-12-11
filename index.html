@@ -25,14 +25,37 @@
                 <input type="password"  id="new-password" pattern="[a-z0-5]{8,}" required />
             </label>
         </fieldset>
+
         <fieldset>
             <legend>Account type (required)</legend>
             <label for="personal-account"><input type="radio" id="personal-account" name="account-type" checked> Personal</label>
             <label for="business-account"><input type="radio" id="business-account" name="account-type"> Business</label>
         </fieldset>
-        <fieldset></fieldset>
+
+        <fieldset>
+            <label for="profile-picture">Upload a profile picture:
+                <input type="file" name="profile-picture" id="profile-picture">
+            </label>
+            <label for="age">Input your age (years):
+                <input type="number" min="13" max="120" name="age" id="age">
+            </label>
+            <label for="referrer">How did you hear about us
+                <select name="referrer" id="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+
+            <label for="bio">Provide a bio:
+                <textarea name="bio" id="bio" rows="3" cols="30" placeholder="I like coding at the beach..."></textarea>
+            </label>
+        </fieldset>
+
         <label for="terms-and-conditions">
-          <input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+          <input id="terms-and-conditions" name="terms" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
         </label>
         <input type="submit" value="Submit" />
     </form>
