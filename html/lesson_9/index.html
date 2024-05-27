@@ -1,0 +1,126 @@
+<!-- Forms and Inputs -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata placed here -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Parmenas Munene">
+        <meta name="description" content="This file containts what im learning as I builld a webpagein HTML">
+        <title>My first webpage</title>
+        <link rel="icon" href="html.png" type="imag/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <!-- where what is seen on the browser is placed here -->
+            <h1>My goals for the year</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#html">Learning html</a>
+                    </li>
+                    <li>
+                        <a href="#vacation">Planning for a vaccation</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <section id="html">
+                <h2>IM ready to learn html!</h2>
+                <p>This is my first webpage.</p>
+        
+                <h3>My daily schedule</h3>
+                <p>Let me tell you how:</p> 
+                    <ol>
+                        <li>.. I learn about webdev</li>
+                        <li>.. I Plan my day</li>
+                        <li>.. I use resources from <abbr title="Mozilla  Developer Network"><a href="https://mozilladeveloper.net">MDN</a></abbr></li>
+                    </ol>    
+            </section>
+
+            <aside>
+                <summary>
+                    <details>Guesss How many number of hours Do I spend in coding</details>
+                    <p>I code for three hours each morning</p>
+                </summary>
+            </aside>
+            <br>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="08.00">8am</time>-
+                        <time datetime="11.00">11am</time>
+                    </td>
+                    <td>Write Code</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="11.00">11am</time>-
+                        <time datetime="12.00">12pm</time>
+                    </td>
+                    <td>Eat Lunch</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="12.00">12am</time>-
+                        <time datetime="17.00">5pm</time>
+                    </td>
+                    <td>Study for other courses</td>
+                </tr>
+            </table>
+
+            <hr>
+            
+            <section id="vacation">
+                <h2>Im also planning a vaccation!</h2>
+                <p>Ive been working hard and <em>really need to get away</em></p>
+                <p>Ive been living in Kiambuu So I want to visit a beach</p>
+
+                <h3>PLaces I want to avoid</h3>
+                <dl>
+                    <dt>North pole</dt>
+                    <dd>I hear these places are cold</dd>
+
+                    <dt>South pole</dt>
+                    <dd>I also hear these places are cold</dd>
+
+                    <dt>Eastern</dt>
+                    <dd>The places have poisonous animals</dd>
+                </dl>
+            </section>
+
+            <hr>
+
+            <article id="contact">
+                <h2>Contact me</h2>
+                <p>Id really like to talk to you</p>
+
+                <form action="url-to-take-info-from-form" method="post">
+                    <label for="firstName">First name</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="eg: jane" autocomplete="on">  
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="eg: paul" autocomplete="on">
+                    <label for="email">Email address</label>
+                    <input type="text" name="email" id="email" placeholder="eg: example@gmail.com" autocomplete="on">
+                </form>
+            </article>
+
+        </main>
+
+        <hr>
+        <footer>
+            <p>&lt;&lt;&lt; &copy; Parmenas Munene &gt;&gt;&gt;</p>
+        </footer>
+    </body>
+</html>
