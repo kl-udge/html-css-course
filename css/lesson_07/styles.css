@@ -1,0 +1,21 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus {
+    color: dodgerblue;
+    background: red;
+}
+
+a:active {
+    color: red;
+}
