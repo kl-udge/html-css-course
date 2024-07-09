@@ -1,0 +1,181 @@
+/* syntax for the media query
+
+@media media-type and (condition: breakpoint) {
+    CSS RULES
+} */
+
+
+/* some of the breakpoints we can have
+
+@media screen and (min-width: 480px) {
+    for setting rules for the smallest screen(phone)
+}
+
+
+@media screen and (orientation: landscape) {
+    for setting rules once maybe the phone is tilted from potrait to landscape
+} */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* fonts */
+    --FF: Verdana, Geneva, Tahoma, sans-serif;
+    /* --FS: min(2.25rem, 3vh); */
+    /* --FS: max(1.75rem, 3vh); */
+    --FS: clamp(1.75rem, 3vh, 22.25rem);
+    --FS-XL: 3rem;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vh);
+
+    /* colors */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1E293B;
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+    --OTHER-COLOR: red;
+}
+
+body {
+    font: var(--FS) var(--FF);
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--LIGHT-COLOR);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--LIGHT-COLOR);
+    color: var(--DARK-COLOR);
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--DARK-COLOR);
+    box-shadow: 0 6px 5px -5px var(--OTHER-COLOR);
+}
+
+main {
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: 0.5em;
+
+    /* padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px); */
+}
+
+.square {
+    background-color: var(--SQUARE-BGCOLOR);
+    width: var(--SQUARE-SIZE);
+    height: var(--SQUARE-SIZE);
+    border-radius: 16px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+}
+
+.square--highlight {
+    --SQUARE-BGCOLOR: cornflowerblue;
+}
+
+footer {
+    bottom: 0;
+}
+
+/* implementing dark mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --BGCOLOR: #000;
+        --ALT-BGCOLOR: #333;
+        --RADIAL-COLOR: rgb(217, 217, 217);
+        --SQUARE-BGCOLOR: rgb(202, 174, 202);
+    }
+}
+
+/* small screen breakpoints */
+@media screen and (min-width: 576px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(var(--RADIAL-COLOR), green);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* medium screen breakpoints */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: gold;
+        background-image: radial-gradient(var(--RADIAL-COLOR), gold);
+    }
+}
+
+
+/* large screen breakpoints */
+@media screen and  (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(var(--RADIAL-COLOR), firebrick);
+    }
+}
+
+
+/* X-large screen breakpoint */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(var(--RADIAL-COLOR), rebeccapurple);
+    }
+}
+
+
+
+/* MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 475px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(var(--RADIAL-COLOR), dodgerblue);
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
